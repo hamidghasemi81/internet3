@@ -1,0 +1,516 @@
+<DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- link Bootstrap -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <script src="../Assets/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/Style.css" />
+  </head>
+  <body>
+    <!-- section1 -->
+    <section class="sticky-top">
+      <nav
+        class="navbar-font navbar p-3 navbar-expand-sm bg-white container-fluid z-1 d"
+      >
+        <div class="container d-flex">
+          <div>
+            <a href="#" class="text-decoration-none text-black">
+              <h4>MULTI</h4>
+            </a>
+          </div>
+          <div class="d-flex navbar-item">
+            <ul class="d-lg-flex d-none navbar-nav text-dark">
+              <li class="nav-item">
+                <a class="nav-link text-danger" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Team</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Dropdown</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+            <button 
+              class="border-0 txet bg-danger rounded-3 text-light btn btn-primary get-started-btn "
+            >
+              Get Started
+            </button>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <!--end section1-->
+
+<!--section2-->
+<section>
+  <div
+    id="carouselExampleFade"
+    class="carousel slide carousel-fade"
+    data-bs-ride="carousel"
+  >
+    <div class="carousel-indicators">
+      <button 
+        type="button"
+        data-bs-target="#carouselExampleFade"
+        data-bs-slide-to="0"
+        class="active"
+        aria-current="true"
+        aria-label="Slide 1"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleFade"
+        data-bs-slide-to="1"
+        aria-label="Slide 2"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleFade"
+        data-bs-slide-to="2"
+        aria-label="Slide 3"
+      ></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active slider-part">
+        <img
+          src="./assets/images/hero-carousel-1.jpg"
+          class="d-block w-100 slider-part-image"
+          alt="..."
+        />
+        <div class="carousel-caption top-0 mt-4">
+          <h5 class="text-uppercase mt-5 fs-2">Welcome to Multi</h5>
+          <p class="mt-5">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A nam
+            repudiandae, eligendi, nesciunt et porro quia quam magnam, nulla
+            obcaecati nemo. Nisi, aliquid totam! Asperiores fugiat quia
+            praesentium nesciunt nisi.
+          </p>
+          <button 
+            class="bg-danger btn px-4 py-1 fs-8 align-items-center mt-2 text-light get-started-btn""
+          >
+            Get Started
+          </button>
+        </div>
+      </div>
+      <div class="carousel-item slider-part">
+        <img
+          src="./assets/images/hero-carousel-2.jpg"
+          class="d-block w-100 slider-part-image"
+          alt="..."
+        />
+        <div class="carousel-caption top-0 mt-4">
+          <h5 class="text-uppercase mt-5 fs-2">At vero eos et accusamus</h5>
+          <p class="mt-5">
+            Nam libero tempore, cum soluta nobis est eligendi optio cumque
+            nihil impedit quo minus id quod maxime placeat facere possimus,
+            omnis voluptas assumenda est, omnis dolor repellendus.
+            Temporibus autem quibusdam et aut officiis debitis aut.
+          </p>
+          <button
+            class="bg-danger btn px-4 py-1 fs-8 align-items-center mt-2 text-light"
+          >
+            Get Started
+          </button>
+        </div>
+      </div>
+      <div class="carousel-item slider-part">
+        <img
+          src="./assets/images/hero-carousel-3.jpg"
+          class="d-block w-100 slider-part-image"
+          alt="..."
+        />
+        <div class="carousel-caption top-0 mt-4">
+          <h5 class="text-uppercase mt-5 fs-2">
+            Temporibus autem quibusdam
+          </h5>
+          <p class="mt-5">
+            Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
+            quia voluptas sit aspernatur aut odit aut fugit, sed quia
+            consequuntur magni dolores eos qui ratione voluptatem sequi
+            nesciunt omnis iste natus error sit voluptatem accusantium.
+          </p>
+          <button 
+            class="bg-danger btn px-4 py-1 fs-8 align-items-center mt-2 text-light"
+          >
+            Get Started
+          </button>
+        </div>
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselExampleFade"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselExampleFade"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section>
+
+<!--section3-->
+ <!-- Title -->
+ <section class="pt-5 container">
+  <div class="Title-div">
+    <h6 class="text-uppercase after-Title fs-7">About</h6>
+    <h3 class="text-uppercase">Learn More about us</h3>
+  </div>
+</section>
+<!-- About -->
+<section class="container pt-4 about-section">
+  <div class="row">
+    <div class="col-lg-6 col-md-9 col-sm-12 p-1">
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta
+        dolorum recusandae dolore repudiandae dolorem adipisci ut? Quae
+        deleniti temporibus nihil porro. Dolorem voluptatibus ullam,
+        adipisci recusandae eveniet hic quod quasi!
+      </p>
+      <div class="d-flex align-items-center text-center">
+        <i class="bi bi-check2-circle text-danger fs-5"></i>
+        <p class="mb-0">
+          Ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+      </div>
+      <div class="d-flex align-items-center text-center">
+        <i class="bi bi-check2-circle text-danger fs-5"></i>
+        <p class="mb-0">
+          Duis aute irure dolor in reprehenderit in voluptate velit.
+        </p>
+      </div>
+      <div class="d-flex align-items-center text-center">
+        <i class="bi bi-check2-circle text-danger fs-5"></i>
+        <p class="mb-0">Ullamco laboris nisi ut aliquip ex ea commodo</p>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-9 col-sm-12 p-1">
+      <p>
+        Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+        irure dolor in reprehenderit in voluptate velit esse cillum dolore
+        eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
+      </p>
+      <button class="bg-danger bu btn px-5 py-2 fs-6 text-light">
+        Read More <i class="bi bi-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!--section4-->
+
+ <!-- Stat Box -->
+ <section>
+  <section class="py-5 bg-light text-secondary">
+    <div class="container pt-5">
+      <div class="row text-center">
+        <div class="col-lg-3 col-md-6 col-sm-9 mb-4">
+          <div class="position-relative p-1 bg-white shadow rounded">
+            <div
+              class="position-absolute top-0 start-50 translate-middle bg-white rounded-circle px-3 py-2 shadow-sm"
+            >
+              <i class="bi bi-emoji-smile text-danger fs-2"></i>
+            </div>
+            <h2 class="mt-5">232</h2>
+            <p>Happy Clients</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-9 mb-4">
+          <div class="position-relative p-1 bg-white shadow rounded">
+            <div
+              class="position-absolute top-0 start-50 translate-middle bg-white rounded-circle px-3 py-2 shadow-sm"
+            >
+              <i class="bi bi-journal-text text-danger fs-2"></i>
+            </div>
+            <h2 class="mt-5">521</h2>
+            <p>Projects</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-9 mb-4">
+          <div class="position-relative p-1 bg-white shadow rounded">
+            <div
+              class="position-absolute top-0 start-50 translate-middle bg-white rounded-circle px-3 py-2 shadow-sm"
+            >
+              <i class="bi bi-headset text-danger fs-2"></i>
+            </div>
+            <h2 class="mt-5">1463</h2>
+            <p>Hours Of Support</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-9 mb-4">
+          <div class="position-relative p-1 bg-white shadow rounded">
+            <div
+              class="position-absolute top-0 start-50 translate-middle bg-white rounded-circle px-3 py-2 shadow-sm"
+            >
+              <i class="bi bi-people text-danger fs-2"></i>
+            </div>
+            <h2 class="mt-5">15</h2>
+            <p>Hard Workers</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- Text box-->
+<section class="container">
+  <div class="row d-flex flex-wrap text">
+    <div class="col-lg-3 col-md-6 col-sm-9 p-2 text-secondary">
+      <h5 class="text-dark">Quasi eaque omnis</h5>
+      <p class="p-2">
+        Eius non minus autem soluta ut ui labore omnis quisquam corrupti
+        autem odit voluptas quos commodi magnam occaecati.
+      </p>
+      <div>
+        <div>
+          <i class="bi bi-check2 text-danger"></i>
+          <span>Ullamco laboris nisi ut aliquip </span>
+        </div>
+        <div>
+          <i class="bi bi-check2 text-danger"></i>
+          <span>Duis aute irure dolor in reprehenderit </span>
+        </div>
+        <div>
+          <i class="bi bi-check2 text-danger"></i>
+          <span>Ullamco laboris nisi ut aliquip ex ea </span>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-9 p-2 text-secondary">
+      <h5 class="text-dark">Et nemo dolores consectetur</h5>
+      <p class="p-2">
+        Ducimus ea quam et occaecati est. Temporibus in soluta labore
+        voluptates aut. Et sit soluta non repellat sed quia dire plovers
+        tradoria
+      </p>
+      <div>
+        <div>
+          <i class="bi bi-check2 text-danger"></i>
+          <span>Enim temporibus maiores eligendi </span>
+        </div>
+        <div>
+          <i class="bi bi-check2 text-danger"></i>
+          <span>Ut maxime ut quibusdam quam qui </span>
+        </div>
+        <div>
+          <i class="bi bi-check2 text-danger"></i>
+          <span>Officiis aspernatur in officiis </span>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-9 p-2 text-secondary">
+      <h5 class="text-dark">Staque laboriosam modi</h5>
+      <p class="p-2">
+        Velit eos error et dolor omnis voluptates nobis tenetur sed enim
+        nihil vero qui suscipit ipsum at magni. Ipsa architecto consequatur
+        aliquam
+      </p>
+      <div>
+        <div>
+          <i class="bi bi-check2 text-danger"></i>
+          <span>Quis voluptates laboriosam numquam </span>
+        </div>
+        <div>
+          <i class="bi bi-check2 text-danger"></i>
+          <span>Debitis eos est est corrupti </span>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-9 p-2 text-secondary">
+      <h5 class="text-dark">Dignissimos suscipit iste</h5>
+      <p class="p-2">
+        Molestiae occaecati assumenda quia saepe nobis recusandae at dicta
+        ducimus sequi numquam commodi est in consequatur ea magnam quia
+        itaque
+      </p>
+      <div>
+        <div>
+          <i class="bi bi-check2 text-danger"></i>
+          <span>Veritatis qui reprehenderit quis </span>
+        </div>
+        <div>
+          <i class="bi bi-check2 text-danger"></i>
+          <span>Accusantium vel numquam sunt minus </span>
+        </div>
+        <div>
+          <i class="bi bi-check2 text-danger"></i>
+          <span>Voluptatem pariatur est sationem </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+   
+<!--section5-->
+ <!-- Title -->
+ <section class="pt-5 container">
+  <div class="Title-div">
+      <h6 class="text-uppercase after-Title fs-7">Services</h6>
+      <h3 class="text-uppercase">Check Our Services</h3>
+  </div>
+</section>
+
+<!-- service-box -->
+<section>
+  <div class="container pt-5">
+      <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-10 p-2">
+              <div class="position-relative border border-1 border-secondary border-opacity-25 service-box">
+                  <div class="service">
+                      <div class="service-icon bg-danger align-content-center mb-4 justify-content-center d-flex">
+                          <i class="bi bi-activity text-light fs-3"></i>
+                      </div>
+                      <div></div>
+                  </div>
+                  <div class="text-center"
+                       style="margin-top: -70px; margin-bottom: 100px">
+                      <h3>Nesciunt Mete</h3>
+                      <p>
+                          Provident nihil minus qui consequatur non omnis maiores. Eos
+                          accusantium minus dolores iure perferendis tempore et
+                          consequatur.
+                      </p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-10 p-2">
+              <div class="position-relative border border-1 border-secondary border-opacity-25 service-box">
+                  <div class="service">
+                      <div class="service-icon bg-danger align-content-center mb-4 justify-content-center d-flex">
+                          <i class="bi bi-broadcast text-light fs-3"></i>
+                      </div>
+                      <div></div>
+                  </div>
+                  <div class="text-center"
+                       style="margin-top: -70px; margin-bottom: 100px">
+                      <h3>Eosle Commodi</h3>
+                      <p>
+                          Ut autem aut autem non a. Sint sint sit facilis nam iusto
+                          sint. Libero corrupti neque eum hic non ut nesciunt dolorem.
+                      </p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-10 p-2">
+              <div class="position-relative border border-1 border-secondary border-opacity-25 service-box">
+                  <div class="service">
+                      <div class="service-icon bg-danger align-content-center mb-4 justify-content-center d-flex">
+                          <i class="bi bi-easel text-light fs-3"></i>
+                      </div>
+                      <div></div>
+                  </div>
+                  <div class="text-center"
+                       style="margin-top: -70px; margin-bottom: 100px">
+                      <h3>Ledo Markt</h3>
+                      <p>
+                          Ut excepturi voluptatem nisi sed. Quidem fuga consequatur.
+                          Minus ea aut. Vel qui id voluptas adipisci eos earum corrupti.
+                      </p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-10 p-2">
+              <div class="position-relative border border-1 border-secondary border-opacity-25 service-box ">
+                  <div class="service">
+                      <div class="service-icon bg-danger align-content-center mb-4 justify-content-center d-flex">
+                          <i class="bi bi bi-bounding-box-circles text-light fs-3"></i>
+                      </div>
+                      <div></div>
+                  </div>
+                  <div class="text-center"
+                       style="margin-top: -70px; margin-bottom: 100px">
+                      <h3>Asperiores Commodit</h3>
+                      <p>
+                          Non et temporibus minus omnis sed dolor esse consequatur.
+                          Cupiditate sed error ea fuga sit provident adipisci neque.
+                      </p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-10 p-2">
+              <div class="position-relative border border-1 border-secondary border-opacity-25 service-box">
+                  <div class="service">
+                      <div class="service-icon bg-danger align-content-center mb-4 justify-content-center d-flex">
+                          <i class="bi bi-calendar4-week text-light fs-3"></i>
+                      </div>
+                      <div></div>
+                  </div>
+                  <div class="text-center"
+                       style="margin-top: -70px; margin-bottom: 100px">
+                      <h3>Velit Doloremque</h3>
+                      <p>
+                          Cumque et suscipit saepe. Est maiores autem enim facilis ut
+                          aut ipsam corporis aut. Sed animi at autem alias eius labore.
+                      </p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-10 p-2">
+              <div class="position-relative border border-1 border-secondary border-opacity-25 service-box">
+                  <div class="service">
+                      <div class="service-icon bg-danger align-content-center mb-4 justify-content-center d-flex">
+                          <i class="bi bi-chat-square-text text-light fs-3"></i>
+                      </div>
+                      <div></div>
+                  </div>
+                  <div class="text-center"
+                       style="margin-top: -70px; margin-bottom: 100px">
+                      <h3>Dolori Architecto</h3>
+                      <p>
+                          Hic molestias ea quibusdam eos. Fugiat enim doloremque aut
+                          neque non et debitis iure. Corrupti recusandae ducimus enim.
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<br /><br /><br /><br />
+</body>
+</html>
+
+<script>
+
+  const buttons = document.querySelectorAll(".get-started-btn");
+
+  buttons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      window.location.href = "login.html";
+    });
+  });
+</script>

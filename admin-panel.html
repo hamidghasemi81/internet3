@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Panel</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to right, #667eea, #764ba2);
+      min-height: 100vh;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .sidebar {
+      width: 220px;
+      background-color: #343a40;
+      color: white;
+      padding: 20px;
+      height: 100vh;
+      position: fixed;
+      left: 0;
+      top: 0;
+    }
+
+    .sidebar h5 {
+      margin-bottom: 20px;
+    }
+
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .sidebar a:hover {
+      background-color: #5c6368;
+    }
+
+    .main-content {
+      margin: 0px auto;
+      width: calc(100% - 240px);
+      padding: 2rem;
+    }
+
+    .dashboard-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .card-style {
+      background: white;
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .card-style:hover {
+      transform: translateY(-5px);
+    }
+
+    .calculator-button {
+      width: 25%;
+      padding: 20px;
+      font-size: 22px;
+      border-radius: 0.5rem;
+      transition: all 0.2s;
+    }
+
+    .calculator-button:hover {
+      transform: translateX(3px);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .output {
+      background: #f0f0f0;
+      border: 1px solid #ddd;
+      padding: 20px;
+      font-size: 30px;
+      text-align: right;
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+      box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-title {
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-value {
+      font-size: 2rem;
+      color: #4a4a4a;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <div class="dashboard-container">
+      <!-- Calculator Card -->
+      <div class="card-style">
+        <h3 class="text-center mb-4">Calculator</h3>
+        <div class="output" id="output">0</div>
+        <div class="row mt-3">
+          <button class="btn btn-secondary ms-auto calculator-button " onclick="clearOutput()">C</button>
+        </div>
+        <div class="row mt-3">
+          <button class="btn btn-light calculator-button" onclick="appendNumber(7)">7</button>
+          <button class="btn btn-light calculator-button" onclick="appendNumber(8)">8</button>
+          <button class="btn btn-light calculator-button" onclick="appendNumber(9)">9</button>
+          <button class="btn btn-info calculator-button" onclick="appendOperator('+')">+</button>
+        </div>
+        <div class="row mt-3">
+          <button class="btn btn-light calculator-button" onclick="appendNumber(4)">4</button>
+          <button class="btn btn-light calculator-button" onclick="appendNumber(5)">5</button>
+          <button class="btn btn-light calculator-button" onclick="appendNumber(6)">6</button>
+          <button class="btn btn-info calculator-button" onclick="appendOperator('-')">-</button>
+        </div>
+        <div class="row mt-3">
+          <button class="btn btn-light calculator-button" onclick="appendNumber(1)">1</button>
+          <button class="btn btn-light calculator-button" onclick="appendNumber(2)">2</button>
+          <button class="btn btn-light calculator-button" onclick="appendNumber(3)">3</button>
+          <button class="btn btn-info calculator-button" onclick="appendOperator('*')">*</button>
+        </div>
+        <div class="row mt-3">
+          <button class="btn btn-light calculator-button" onclick="appendNumber(0)">0</button>
+          <button class="btn btn-light calculator-button" onclick="appendDot()">.</button>
+          <button class="btn btn-primary calculator-button" onclick="calculateResult()">=</button>
+          <button class="btn btn-info calculator-button" onclick="appendOperator('/')">/</button>
+        </div>
+        
+      </div>
+
+      
+    </div>
+  </div>
+
+  <script>
+    let currentInput = '';
+    let lastOperator = '';
+    let hasDot = false;
+
+    function appendNumber(number) {
+      if (currentInput === '0' && number === 0) return; 
+      currentInput += number;
+      document.getElementById('output').textContent = currentInput;
+    }
+
+    function appendOperator(operator) {
+      if (currentInput === '') return; 
+      if (lastOperator) {
+        calculateResult();
+      }
+      currentInput += operator;
+      document.getElementById('output').textContent = currentInput;
+      lastOperator = operator;
+      hasDot = false;
+    }
+
+    function appendDot() {
+      if (hasDot) return; 
+      if (currentInput === '' || currentInput === '0') {
+          currentInput = '0.'; 
+      } else {
+          currentInput += '.'; 
+      }
+      hasDot = true;
+      document.getElementById('output').textContent = currentInput;
+    }
+
+    function clearOutput() {
+      currentInput = '';
+      hasDot = false;
+      document.getElementById('output').textContent = '0';
+    }
+
+    function calculateResult() {
+      if (currentInput === '') return;
+      try {
+        currentInput = eval(currentInput).toString();
+        if (currentInput.includes('.')) {
+          currentInput = parseFloat(currentInput).toString();
+        }
+        document.getElementById('output').textContent = currentInput;
+        lastOperator = '';
+      } catch (e) {
+        document.getElementById('output').textContent = 'Error';
+        currentInput = '';
+      }
+    }
+  </script>
+
+</body>
+</html>
